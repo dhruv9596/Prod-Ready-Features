@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class PostDTO {
+public class PostDTO  {
 
     private Long id;
 
