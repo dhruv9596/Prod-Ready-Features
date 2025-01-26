@@ -27,7 +27,7 @@ public class AuditController {
         AuditReader reader = AuditReaderFactory.get(                entityManagerFactory.createEntityManager());
 
         List<Number> revisions =  reader.getRevisions(PostEntity.class , postId);
-
+        System.out.println("Log : ");
         return revisions.stream().map(
                 revisionNumber -> reader.find(PostEntity.class , postId , revisionNumber)
         ).collect(Collectors.toList());
